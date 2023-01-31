@@ -1,10 +1,10 @@
 var express = require('express');
 app = express();
 server = require('http').createServer(app);
-io = require('socket.io').listen(server);
+io = require('socket.io')(server);
  
-var SerialPort = require("serialport")//.SerialPort
-var serialPort = new SerialPort("/COM4", { baudRate: 9600 });
+var SerialPort = require("serialport").SerialPort
+var serialPort = new SerialPort({path: "/dev/tty.usbmodem1101",  baudRate: 9600 });
  
 server.listen(8080);
 app.use(express.static('public'));             
