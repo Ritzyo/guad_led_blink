@@ -1,12 +1,5 @@
+For running the serial-interface code, you need to first instal pyserial
 
-Download these before starting development:
+pip install pyserial
 
-[node.js](https://nodejs.org/en/) (once downloaded, use `Node -v` to check version)
-
-johnny-five (`npm install johnny-five`)
-
-express (`npm install express`)
-
-socket.io (`npm install socket.io`)
-
-serialport (`npm install johnny-five`)
+You also might need to check which port you have plugged the UART bridge into and change the corresponding name in the code.
